@@ -1,81 +1,75 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #800080; /* Cor de fundo roxa */
+    background-color: #6a0dad; /* Fundo roxo */
+    color: white; /* Texto branco */
     text-align: center;
-    color: #fff; /* Texto branco */
+    margin: 0;
+    padding: 20px;
 }
 
-h1 {
-    color: #fff;
-}
-
-h2 {
-    color: #ffd700; /* Cor dourada para o subtítulo */
+h1, h2 {
+    margin: 10px 0;
 }
 
 nav {
     margin: 20px 0;
 }
 
-nav button {
-    background-color: #ffd700; /* Botões dourados */
-    color: #800080; /* Texto roxo */
+button {
+    background-color: #8a2be2; /* Cor dos botões */
+    color: white;
+    font-size: 18px;
+    padding: 15px 25px;
     border: none;
-    padding: 15px 30px; /* Tamanho maior */
-    margin: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 10px;
-    font-size: 18px; /* Fonte maior */
-    transition: background-color 0.3s, transform 0.3s; /* Animação */
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-nav button:hover {
-    background-color: #fff;
-    color: #800080;
-    transform: scale(1.1); /* Aumentar ao passar o mouse */
+button:hover {
+    background-color: #7a1ea1; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
 }
 
 .section {
-    display: none; /* Esconder todas as seções por padrão */
-    border: 2px solid #ffd700; /* Borda dourada */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px; /* Espaçamento externo */
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    display: none; /* Oculta seções por padrão */
 }
 
 .imagem-inicial {
-    width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 600px; /* Limita a largura máxima da imagem */
-    border-radius: 10px; /* Bordas arredondadas para a imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    margin: 20px auto; /* Centraliza a imagem */
-}
-
-.imagem-separada {
-    width: 70%; /* Ajuste a largura conforme necessário */
-    max-width: 500px; /* Limita a largura máxima da imagem */
-    border-radius: 10px; /* Bordas arredondadas para a imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    margin: 20px auto; /* Centraliza a imagem */
+    width: 100%; /* Ajusta a imagem inicial para a largura total */
+    max-width: 600px; /* Limita a largura máxima */
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
+    margin: 20px 0; /* Margens superior e inferior */
 }
 
 .image-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre imagens */
 }
 
 .image-container img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    width: 150px; /* Ajusta a largura das imagens da galeria */
+    height: 100px; /* Ajusta a altura das imagens da galeria */
+    object-fit: cover; /* Cobre o espaço disponível */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra na imagem */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
 }
 
 .image-container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.imagem-separada {
+    width: 100%; /* Ajusta a largura das imagens separadas */
+    max-width: 400px; /* Limita a largura máxima */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
+    margin: 20px 0; /* Margens superior e inferior */
 }
