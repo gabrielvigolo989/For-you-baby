@@ -21,19 +21,27 @@ nav button {
     background-color: #ffd700; /* Botões dourados */
     color: #800080; /* Texto roxo */
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
+    padding: 15px 30px; /* Tamanho maior */
+    margin: 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 18px; /* Fonte maior */
+    transition: background-color 0.3s, transform 0.3s; /* Animação */
 }
 
 nav button:hover {
     background-color: #fff;
     color: #800080;
+    transform: scale(1.1); /* Aumentar ao passar o mouse */
 }
 
 .section {
     display: none; /* Esconder todas as seções por padrão */
+    border: 2px solid #ffd700; /* Borda dourada */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Espaçamento externo */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
 }
 
 .image-container {
