@@ -7,79 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Eu te amo</h1>
-    <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
+    <div class="container">
+        <h1>Eu te amo</h1>
+        <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
 
-    <div id="inicio" class="section">
-        <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
-    </div>
-
-    <nav>
-        <button onclick="showSection('galeria')">Galeria</button>
-        <button onclick="showSection('mensagem')">Mensagem</button>
-        <button onclick="showSection('agradecimento')">Agradecimento</button>
-        <button onclick="showSection('sobre')">Um pouco sobre mim</button>
-    </nav>
-
-    <div id="galeria" class="section" style="display:none;">
-        <h1>Galeria de Amor</h1>
-        <div class="image-container">
-            <img src="imagem1.jpeg" alt="Imagem 1" onclick="openModal('imagem1.jpg')">
-            <img src="imagem2.jpeg" alt="Imagem 2" onclick="openModal('imagem2.jpg')">
-            <img src="imagem3.jpeg" alt="Imagem 3" onclick="openModal('imagem3.jpg')">
-            <img src="imagem4.jpeg" alt="Imagem 4" onclick="openModal('imagem4.jpg')">
-            <img src="imagem5.jpeg" alt="Imagem 5" onclick="openModal('imagem5.jpg')">
-            <img src="imagem6.jpeg" alt="Imagem 6" onclick="openModal('imagem6.jpg')">
-            <img src="imagem7.jpeg" alt="Imagem 7" onclick="openModal('imagem7.jpg')">
-            <img src="imagem8.jpeg" alt="Imagem 8" onclick="openModal('imagem8.jpg')">
-            <img src="imagem9.jpeg" alt="Imagem 9" onclick="openModal('imagem9.jpg')">
-            <img src="imagem10.jpeg" alt="Imagem 10" onclick="openModal('imagem10.jpg')">
-            <img src="imagem11.jpeg" alt="Imagem 11" onclick="openModal('imagem11.jpg')">
-            <img src="imagem12.jpeg" alt="Imagem 12" onclick="openModal('imagem12.jpg')">
-            <img src="imagem13.jpeg" alt="Imagem 13" onclick="openModal('imagem13.jpg')">
-            <img src="imagem14.jpeg" alt="Imagem 14" onclick="openModal('imagem14.jpg')">
-            <img src="imagem15.jpeg" alt="Imagem 15" onclick="openModal('imagem15.jpg')">
-            <img src="imagem16.jpeg" alt="Imagem 16" onclick="openModal('imagem16.jpg')">
-            <img src="imagem17.jpeg" alt="Imagem 17" onclick="openModal('imagem17.jpg')">
-            <img src="imagem18.jpeg" alt="Imagem 18" onclick="openModal('imagem18.jpg')">
-            <img src="imagem19.jpeg" alt="Imagem 19" onclick="openModal('imagem19.jpg')">
-            <img src="imagem20.jpeg" alt="Imagem 20" onclick="openModal('imagem20.jpg')">
-            <img src="imagem21.jpeg" alt="Imagem 21" onclick="openModal('imagem21.jpg')">
-            <img src="imagem22.jpeg" alt="Imagem 22" onclick="openModal('imagem22.jpg')">
-            <img src="imagem23.jpeg" alt="Imagem 23" onclick="openModal('imagem23.jpg')">
-            <img src="imagem24.jpeg" alt="Imagem 24" onclick="openModal('imagem24.jpg')">
-            <img src="imagem25.jpeg" alt="Imagem 25" onclick="openModal('imagem25.jpg')">
-            <img src="imagem26.jpeg" alt="Imagem 26" onclick="openModal('imagem26.jpg')">
-            <img src="imagem27.jpeg" alt="Imagem 27" onclick="openModal('imagem27.jpg')">
-            <img src="imagem28.jpeg" alt="Imagem 28" onclick="openModal('imagem28.jpg')">
-            <img src="imagem29.jpeg" alt="Imagem 29" onclick="openModal('imagem29.jpg')">
-            <img src="image30.jpeg" alt="Imagem 30" onclick="openModal('imagem30.jpg')">
+        <div id="inicio" class="section">
+            <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
         </div>
-    </div>
 
-    <div id="mensagem" class="section" style="display:none;">
-        <h1>Mensagem para Maria</h1>
-        <img src="imagem-mensagem.jpg" alt="Imagem da Mensagem" class="imagem-separada">
-        <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão do meu bem-estar. Te amo demais e sou eternamente grato por ter você na minha vida. Cada momento ao seu lado é único e precioso, e eu não trocaria isso por nada!</p>
-    </div>
+        <nav>
+            <button onclick="showSection('galeria')">Galeria</button>
+            <button onclick="showSection('mensagem')">Mensagem</button>
+            <button onclick="showSection('agradecimento')">Agradecimento</button>
+            <button onclick="showSection('sobre')">Um pouco sobre mim</button>
+        </nav>
 
-    <div id="agradecimento" class="section" style="display:none;">
-        <h1>Agradecimento</h1>
-        <img src="imagem-agradecimento.jpg" alt="Imagem de Agradecimento" class="imagem-separada">
-        <p>Maria, quero agradecer por todos os momentos incríveis que vivemos desde julho. Cada risada compartilhada e cada brincadeira só fortalecem o que sinto por você. Esses momentos me fazem perceber o quão sortudo sou por ter você ao meu lado. Desejo que continuemos juntos, criando novas memórias e rindo até não aguentarmos mais. Você é uma parte fundamental da minha vida, e espero que possamos ficar juntos para sempre!</p>
-    </div>
+        <div id="galeria" class="section" style="display:none;">
+            <h1>Galeria de Amor</h1>
+            <div class="image-container">
+                <!-- Imagens da galeria -->
+                <img src="imagem1.jpeg" alt="Imagem 1" onclick="openModal('imagem1.jpeg')">
+                <img src="imagem2.jpeg" alt="Imagem 2" onclick="openModal('imagem2.jpeg')">
+                <img src="imagem3.jpeg" alt="Imagem 3" onclick="openModal('imagem3.jpeg')">
+                <img src="imagem4.jpeg" alt="Imagem 4" onclick="openModal('imagem4.jpeg')">
+                <img src="imagem5.jpeg" alt="Imagem 5" onclick="openModal('imagem5.jpeg')">
+                <img src="imagem6.jpeg" alt="Imagem 6" onclick="openModal('imagem6.jpeg')">
+                <img src="imagem7.jpeg" alt="Imagem 7" onclick="openModal('imagem7.jpeg')">
+                <img src="imagem8.jpeg" alt="Imagem 8" onclick="openModal('imagem8.jpeg')">
+                <img src="imagem9.jpeg" alt="Imagem 9" onclick="openModal('imagem9.jpeg')">
+                <img src="imagem10.jpeg" alt="Imagem 10" onclick="openModal('imagem10.jpeg')">
+                <img src="imagem11.jpeg" alt="Imagem 11" onclick="openModal('imagem11.jpeg')">
+                <img src="imagem12.jpeg" alt="Imagem 12" onclick="openModal('imagem12.jpeg')">
+                <img src="imagem13.jpeg" alt="Imagem 13" onclick="openModal('imagem13.jpeg')">
+                <img src="imagem14.jpeg" alt="Imagem 14" onclick="openModal('imagem14.jpeg')">
+                <img src="imagem15.jpeg" alt="Imagem 15" onclick="openModal('imagem15.jpeg')">
+                <img src="imagem16.jpeg" alt="Imagem 16" onclick="openModal('imagem16.jpeg')">
+                <img src="imagem17.jpeg" alt="Imagem 17" onclick="openModal('imagem17.jpeg')">
+                <img src="imagem18.jpeg" alt="Imagem 18" onclick="openModal('imagem18.jpeg')">
+                <img src="imagem19.jpeg" alt="Imagem 19" onclick="openModal('imagem19.jpeg')">
+                <img src="imagem20.jpeg" alt="Imagem 20" onclick="openModal('imagem20.jpeg')">
+                <img src="imagem21.jpeg" alt="Imagem 21" onclick="openModal('imagem21.jpeg')">
+                <img src="imagem22.jpeg" alt="Imagem 22" onclick="openModal('imagem22.jpeg')">
+                <img src="imagem23.jpeg" alt="Imagem 23" onclick="openModal('imagem23.jpeg')">
+                <img src="imagem24.jpeg" alt="Imagem 24" onclick="openModal('imagem24.jpeg')">
+                <img src="imagem25.jpeg" alt="Imagem 25" onclick="openModal('imagem25.jpeg')">
+                <img src="imagem26.jpeg" alt="Imagem 26" onclick="openModal('imagem26.jpeg')">
+                <img src="imagem27.jpeg" alt="Imagem 27" onclick="openModal('imagem27.jpeg')">
+                <img src="imagem28.jpeg" alt="Imagem 28" onclick="openModal('imagem28.jpeg')">
+                <img src="imagem29.jpeg" alt="Imagem 29" onclick="openModal('imagem29.jpeg')">
+                <img src="imagem30.jpeg" alt="Imagem 30" onclick="openModal('imagem30.jpeg')">
+            </div>
+        </div>
 
-    <div id="sobre" class="section" style="display:none;">
-        <h1>Um pouco sobre mim</h1>
-        <img src="imagem-sobre.jpg" alt="Imagem Sobre Mim" class="imagem-separada">
-        <p>Às vezes, eu sei que sou difícil de lidar. Fico triste por coisas simples e tenho minhas inseguranças, o que pode causar ciúmes. Eu peço desculpas por isso. Na verdade, tudo isso é uma forma de expressar o quanto eu te amo e o quanto você significa para mim. Quero que saiba que estou sempre tentando melhorar e ser uma pessoa melhor para nós dois. Sua paciência e amor são tudo que preciso para enfrentar meus desafios.</p>
-    </div>
+        <div id="mensagem" class="section" style="display:none;">
+            <h1>Mensagem para Maria</h1>
+            <img src="imagem-mensagem.jpg" alt="Imagem da Mensagem" class="imagem-separada">
+            <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão do meu bem-estar. Te amo demais e sou eternamente grato por ter você na minha vida. Cada momento ao seu lado é único e precioso, e eu não trocaria isso por nada!</p>
+        </div>
 
-    <!-- Modal para abrir imagens -->
-    <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
+        <div id="agradecimento" class="section" style="display:none;">
+            <h1>Agradecimento</h1>
+            <img src="imagem-agradecimento.jpg" alt="Imagem de Agradecimento" class="imagem-separada">
+            <p>Maria, quero agradecer por todos os momentos incríveis que vivemos desde julho. Cada risada compartilhada e cada brincadeira só fortalecem o que sinto por você. Esses momentos me fazem perceber o quão sortudo sou por ter você ao meu lado. Desejo que continuemos juntos, criando novas memórias e rindo até não aguentarmos mais. Você é uma parte fundamental da minha vida, e espero que possamos ficar juntos para sempre!</p>
+        </div>
+
+        <div id="sobre" class="section" style="display:none;">
+            <h1>Um pouco sobre mim</h1>
+            <img src="imagem-sobre.jpg" alt="Imagem Sobre Mim" class="imagem-separada">
+            <p>Às vezes, eu sei que sou difícil de lidar. Fico triste por coisas simples e tenho minhas inseguranças, o que pode causar ciúmes. Eu peço desculpas por isso. Na verdade, tudo isso é uma forma de expressar o quanto eu te amo e o quanto você significa para mim. Quero que saiba que estou sempre tentando melhorar e ser uma pessoa melhor para nós dois. Sua paciência e amor são tudo que preciso para enfrentar meus desafios.</p>
+        </div>
+
+        <!-- Modal para abrir imagens -->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
     </div>
 
     <script>
