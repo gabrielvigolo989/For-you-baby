@@ -7,6 +7,12 @@ body {
     padding: 20px;
 }
 
+.container {
+    border: 2px solid #fff; /* Borda branca ao redor do contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+}
+
 h1, h2 {
     margin: 10px 0;
 }
@@ -20,7 +26,7 @@ button {
     color: white;
     font-size: 18px;
     padding: 15px 25px;
-    border: none;
+    border: 2px solid #fff; /* Borda branca nos botões */
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
@@ -60,6 +66,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra na imagem */
     transition: transform 0.3s ease; /* Animação ao passar o mouse */
     cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
+    border: 2px solid #fff; /* Borda branca nas miniaturas */
 }
 
 .image-container img:hover {
