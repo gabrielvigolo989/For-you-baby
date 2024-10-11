@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #6a0dad; /* Fundo roxo */
+    background-color: #800080; /* Fundo roxo */
     color: white; /* Texto branco */
     text-align: center;
     margin: 0;
@@ -8,33 +8,32 @@ body {
 }
 
 .container {
-    border: 2px solid #fff; /* Borda branca ao redor do contêiner */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
+    border: 5px solid white; /* Borda ao redor do conteúdo */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
 }
 
 h1, h2 {
-    margin: 10px 0;
+    color: #fff;
 }
 
 nav {
-    margin: 20px 0;
+    margin: 20px 0; /* Margens superiores e inferiores */
 }
 
 button {
-    background-color: #8a2be2; /* Cor dos botões */
+    background-color: #7a1ea1; /* Cor dos botões */
     color: white;
-    font-size: 18px;
-    padding: 15px 25px;
-    border: 2px solid #fff; /* Borda branca nos botões */
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #fff; /* Borda dos botões */
+    border-radius: 10px;
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 0 10px; /* Margem entre os botões */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
 }
 
 button:hover {
-    background-color: #7a1ea1; /* Cor ao passar o mouse */
+    background-color: #6c1a8f; /* Cor ao passar o mouse */
     transform: scale(1.05); /* Aumenta ligeiramente o botão */
 }
 
@@ -73,16 +72,6 @@ button:hover {
     transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
-.imagem-separada {
-    width: 100%; /* Ajusta a largura das imagens separadas */
-    max-width: 400px; /* Limita a largura máxima */
-    height: auto; /* Mantém a proporção */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
-    margin: 20px 0; /* Margens superior e inferior */
-}
-
-/* Estilização do Modal */
 .modal {
     display: none; /* Esconde o modal por padrão */
     position: fixed; /* Fixa o modal na tela */
