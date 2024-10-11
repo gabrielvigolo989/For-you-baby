@@ -1,17 +1,39 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #800080; /* Cor de fundo roxa */
     text-align: center;
+    color: #fff; /* Texto branco */
 }
 
 h1 {
-    color: #333;
+    color: #fff;
 }
 
-.message-container {
-    margin: 20px;
-    font-size: 18px;
-    color: #555;
+h2 {
+    color: #ffd700; /* Cor dourada para o subtítulo */
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav button {
+    background-color: #ffd700; /* Botões dourados */
+    color: #800080; /* Texto roxo */
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background-color: #fff;
+    color: #800080;
+}
+
+.section {
+    display: none; /* Esconder todas as seções por padrão */
 }
 
 .image-container {
