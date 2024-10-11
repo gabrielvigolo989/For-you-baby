@@ -155,11 +155,14 @@ I'd wanna be next to you
             const modalImage = document.getElementById("modalImage");
             modal.style.display = "block";
             modalImage.src = imageSrc;
+            modalImage.classList.add('fade-in'); // Adiciona animação
         }
 
         function closeModal() {
             const modal = document.getElementById("modal");
             modal.style.display = "none";
+            const modalImage = document.getElementById("modalImage");
+            modalImage.classList.remove('fade-in'); // Remove animação
         }
 
         // Exibe a seção inicial ao carregar a página
