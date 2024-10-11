@@ -4,19 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surpresa para Você</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Uma Galeria de Amor</h1>
-    
-    <div class="message-container">
-        <p>Para você, meu amor, que traz alegria à minha vida. Espero que goste!</p>
+    <h1>Eu te amo</h1>
+    <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
+
+    <nav>
+        <button onclick="showSection('galeria')">Galeria</button>
+        <button onclick="showSection('mensagem')">Mensagem</button>
+        <button onclick="showSection('agradecimento')">Agradecimento</button>
+        <button onclick="showSection('sobre')">Um pouco sobre mim</button>
+    </nav>
+
+    <div id="galeria" class="section">
+        <h1>Galeria de Amor</h1>
+        <div class="image-container">
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
     </div>
-    
-    <div class="image-container">
-        <img src="imagem1.jpg" alt="Imagem 1">
-        <img src="imagem2.jpg" alt="Imagem 2">
-        <img src="imagem3.jpg" alt="Imagem 3">
+
+    <div id="mensagem" class="section" style="display:none;">
+        <h1>Mensagem para Maria</h1>
+        <p>Oi, meu amor! Só queria dizer que você é a razão do meu sorriso. Te amo demais e sou muito feliz ao seu lado!</p>
     </div>
+
+    <div id="agradecimento" class="section" style="display:none;">
+        <h1>Agradecimento</h1>
+        <p>Maria, agradeço por todos os momentos incríveis que vivemos desde julho. Nossas risadas e brincadeiras são tudo pra mim. Desejo te ter ao meu lado por toda a minha vida!</p>
+    </div>
+
+    <div id="sobre" class="section" style="display:none;">
+        <h1>Um pouco sobre mim</h1>
+        <p>Às vezes sou difícil de lidar e fico triste por coisas simples. Tenho minhas inseguranças e ciúmes, e peço desculpas por isso. É só a minha maneira de expressar o quanto eu te amo.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
