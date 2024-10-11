@@ -52,6 +52,14 @@ nav button:hover {
     margin: 20px auto; /* Centraliza a imagem */
 }
 
+.imagem-separada {
+    width: 70%; /* Ajuste a largura conforme necessário */
+    max-width: 500px; /* Limita a largura máxima da imagem */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    margin: 20px auto; /* Centraliza a imagem */
+}
+
 .image-container {
     display: flex;
     justify-content: center;
