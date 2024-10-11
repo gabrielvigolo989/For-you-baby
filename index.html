@@ -22,10 +22,69 @@
             <button onclick="showSection('sobre')">Um pouco sobre mim</button>
         </nav>
 
+        <div id="letra-musica" class="section" style="display:none;">
+            <h3>Letra da Música "Die With A Smile"</h3>
+            <pre>
+Ooh
+I
+
+I just woke up from a dream
+Where you and I had to say goodbye
+And I don't know what it all means
+But since I survived, I realized
+
+Wherever you go, that's where I'll follow
+Nobody's promised tomorrow
+So I'ma love you every night like it's the last night
+Like it's the last night
+
+If the world was ending, I'd wanna be next to you
+If the party was over and our time on Earth was through
+I'd wanna hold you just for a while
+And die with a smile
+If the world was ending, I'd wanna be next to you
+
+Woo-ooh
+
+Ooh, lost
+Lost in the words that we scream
+I don't even wanna do this anymore
+'Cause you already know what you mean to me
+And our love is the only war worth fighting for
+
+Wherever you go, that's where I'll follow
+Nobody's promised tomorrow
+So I'ma love you every night like it's the last night
+Like it's the last night
+
+If the world was ending, I'd wanna be next to you
+If the party was over and our time on Earth was through
+I'd wanna hold you just for a while
+And die with a smile
+If the world was ending, I'd wanna be next to you
+
+Right next to you
+Next to you
+Right next to you
+Oh-oh-oh
+
+If the world was ending, I'd wanna be next to you
+If the party was over and our time on Earth was through
+I'd wanna hold you just for a while
+And die with a smile
+If the world was ending, I'd wanna be next to you
+If the world was ending, I'd wanna be next to you
+
+Ooh, ooh
+I'd wanna be next to you
+            </pre>
+        </div>
+
+        <p>QUERO VOCÊ PRA VIDA TODA MEU BEM... EU TE AMO MINHA MORCEGUINHA &lt;3</p>
+
         <div id="galeria" class="section" style="display:none;">
             <h1>Galeria de Amor</h1>
             <div class="image-container">
-                <!-- Imagens da galeria -->
                 <img src="imagem1.jpeg" alt="Imagem 1" onclick="openModal('imagem1.jpeg')">
                 <img src="imagem2.jpeg" alt="Imagem 2" onclick="openModal('imagem2.jpeg')">
                 <img src="imagem3.jpeg" alt="Imagem 3" onclick="openModal('imagem3.jpeg')">
@@ -61,19 +120,16 @@
 
         <div id="mensagem" class="section" style="display:none;">
             <h1>Mensagem para Maria</h1>
-            <img src="imagem-mensagem.jpg" alt="Imagem da Mensagem" class="imagem-separada">
             <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão do meu bem-estar. Te amo demais e sou eternamente grato por ter você na minha vida. Cada momento ao seu lado é único e precioso, e eu não trocaria isso por nada!</p>
         </div>
 
         <div id="agradecimento" class="section" style="display:none;">
             <h1>Agradecimento</h1>
-            <img src="imagem-agradecimento.jpg" alt="Imagem de Agradecimento" class="imagem-separada">
             <p>Maria, quero agradecer por todos os momentos incríveis que vivemos desde julho. Cada risada compartilhada e cada brincadeira só fortalecem o que sinto por você. Esses momentos me fazem perceber o quão sortudo sou por ter você ao meu lado. Desejo que continuemos juntos, criando novas memórias e rindo até não aguentarmos mais. Você é uma parte fundamental da minha vida, e espero que possamos ficar juntos para sempre!</p>
         </div>
 
         <div id="sobre" class="section" style="display:none;">
             <h1>Um pouco sobre mim</h1>
-            <img src="imagem-sobre.jpg" alt="Imagem Sobre Mim" class="imagem-separada">
             <p>Às vezes, eu sei que sou difícil de lidar. Fico triste por coisas simples e tenho minhas inseguranças, o que pode causar ciúmes. Eu peço desculpas por isso. Na verdade, tudo isso é uma forma de expressar o quanto eu te amo e o quanto você significa para mim. Quero que saiba que estou sempre tentando melhorar e ser uma pessoa melhor para nós dois. Sua paciência e amor são tudo que preciso para enfrentar meus desafios.</p>
         </div>
 
@@ -96,17 +152,20 @@
 
         function openModal(imageSrc) {
             const modal = document.getElementById("modal");
-            const modalImg = document.getElementById("modalImage");
-            const captionText = document.getElementById("caption");
+            const modalImage = document.getElementById("modalImage");
             modal.style.display = "block";
-            modalImg.src = imageSrc;
-            captionText.innerHTML = imageSrc;
+            modalImage.src = imageSrc;
         }
 
         function closeModal() {
             const modal = document.getElementById("modal");
             modal.style.display = "none";
         }
+
+        // Exibe a seção inicial ao carregar a página
+        window.onload = function() {
+            showSection('letra-musica');
+        };
     </script>
 </body>
 </html>
