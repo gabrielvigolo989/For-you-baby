@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surpresa para Você</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Eu te amo</h1>
     <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
+
+    <div id="inicio" class="section">
+        <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
+    </div>
 
     <nav>
         <button onclick="showSection('galeria')">Galeria</button>
@@ -17,7 +21,7 @@
         <button onclick="showSection('sobre')">Um pouco sobre mim</button>
     </nav>
 
-    <div id="galeria" class="section">
+    <div id="galeria" class="section" style="display:none;">
         <h1>Galeria de Amor</h1>
         <div class="image-container">
             <img src="imagem1.jpg" alt="Imagem 1">
