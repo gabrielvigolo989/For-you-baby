@@ -8,25 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <div id="pergunta" class="section" style="display: block;">
+        <div id="pergunta" class="section">
             <h1>VOCÊ ME AMA???</h1>
             <button onclick="showMainContent()">SIM!!!</button>
-            <button disabled onclick="alert('Essa opção está indisponível.')">SIM!!! (não disponível)</button>
+            <button disabled>(OPÇÃO NÃO DISPONÍVEL)</button>
         </div>
-
-        <h1>Eu te amo</h1>
-        <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
-
-        <div id="inicio" class="section" style="display:none;">
-            <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
-        </div>
-
-        <nav>
-            <button onclick="showSection('galeria')">Galeria</button>
-            <button onclick="showSection('mensagem')">Mensagem</button>
-            <button onclick="showSection('agradecimento')">Agradecimento</button>
-            <button onclick="showSection('sobre')">Um pouco sobre mim</button>
-        </nav>
 
         <div id="letra-musica" class="section" style="display:none;">
             <h3>Letra da Música "Die With A Smile"</h3>
@@ -164,25 +150,22 @@ I'd wanna be next to you
             document.getElementById(sectionId).style.display = 'block';
         }
 
+        // Exibe a seção de pergunta ao carregar a página
+        window.onload = function() {
+            showSection('pergunta');
+        };
+
         function openModal(imageSrc) {
             const modal = document.getElementById("modal");
             const modalImage = document.getElementById("modalImage");
             modal.style.display = "block";
             modalImage.src = imageSrc;
-            modalImage.classList.add('fade-in'); // Adiciona animação
         }
 
         function closeModal() {
             const modal = document.getElementById("modal");
             modal.style.display = "none";
-            const modalImage = document.getElementById("modalImage");
-            modalImage.classList.remove('fade-in'); // Remove animação
         }
-
-        // Exibe a seção inicial ao carregar a página
-        window.onload = function() {
-            showSection('pergunta');
-        };
     </script>
 </body>
 </html>
