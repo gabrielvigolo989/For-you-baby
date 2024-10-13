@@ -1,9 +1,10 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: #7a1ea1; /* Cor de fundo roxa */
     color: white; /* Cor do texto */
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    margin: 0; /* Remove margens */
-    padding: 0; /* Remove espaçamentos */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
     display: flex; /* Flexbox para centralizar */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
@@ -11,11 +12,9 @@ body {
 }
 
 .container {
-    text-align: center; /* Centraliza o texto dentro do container */
-}
-
-.section {
-    display: none; /* Esconde todas as seções inicialmente */
+    border: 5px solid white; /* Borda ao redor do conteúdo */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
 }
 
 #pergunta {
@@ -25,13 +24,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
-#pergunta h1 {
-    color: #fff; /* Cor do texto da pergunta */
-    font-size: 2em; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Margem inferior */
-}
-
-#pergunta button {
+button {
     background-color: #7a1ea1; /* Cor dos botões */
     color: white;
     border: 2px solid #fff; /* Borda dos botões */
@@ -40,17 +33,14 @@ body {
     margin: 0 10px; /* Margem entre os botões */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
-    font-size: 1.2em; /* Tamanho da fonte dos botões */
 }
 
-#pergunta button:hover {
+button:hover {
     background-color: #6c1a8f; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Aumenta ligeiramente o botão */
 }
 
-#pergunta button:disabled {
-    background-color: #555; /* Cor dos botões desabilitados */
-    cursor: not-allowed; /* Muda o cursor para indicar que está desabilitado */
+.section {
+    display: none; /* Oculta seções por padrão */
 }
 
-/* Estilos adicionais podem ser adicionados aqui */
+/* Estilos adicionais para o modal e outras seções aqui */
