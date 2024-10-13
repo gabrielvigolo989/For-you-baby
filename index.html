@@ -8,10 +8,16 @@
 </head>
 <body>
     <div class="container">
+        <div id="pergunta" class="section" style="display: block;">
+            <h1>VOCÊ ME AMA???</h1>
+            <button onclick="showMainContent()">SIM!!!</button>
+            <button disabled onclick="alert('Essa opção está indisponível.')">SIM!!! (não disponível)</button>
+        </div>
+
         <h1>Eu te amo</h1>
         <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
 
-        <div id="inicio" class="section">
+        <div id="inicio" class="section" style="display:none;">
             <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
         </div>
 
@@ -142,6 +148,14 @@ I'd wanna be next to you
     </div>
 
     <script>
+        function showMainContent() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            showSection('letra-musica'); // Exibe a seção inicial desejada
+        }
+
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
@@ -167,7 +181,7 @@ I'd wanna be next to you
 
         // Exibe a seção inicial ao carregar a página
         window.onload = function() {
-            showSection('letra-musica');
+            showSection('pergunta');
         };
     </script>
 </body>
