@@ -72,8 +72,6 @@ I'd wanna be next to you
             </pre>
         </div>
 
-        <p>QUERO VOCÊ PRA VIDA TODA MEU BEM... EU TE AMO MINHA MORCEGUINHA &lt;3</p>
-
         <div id="galeria" class="section" style="display:none;">
             <h1>Galeria de Amor</h1>
             <div class="image-container">
@@ -140,20 +138,27 @@ I'd wanna be next to you
                 section.style.display = 'none';
             });
             showSection('letra-musica'); // Exibe a seção inicial desejada
+            setTimeout(() => {
+                showSection('galeria'); // Exibe a galeria após a letra
+                setTimeout(() => {
+                    showSection('mensagem'); // Exibe a mensagem
+                    setTimeout(() => {
+                        showSection('agradecimento'); // Exibe o agradecimento
+                        setTimeout(() => {
+                            showSection('sobre'); // Exibe a seção sobre
+                        }, 3000); // Tempo para exibir cada seção
+                    }, 3000);
+                }, 3000);
+            }, 3000);
         }
 
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
-                section.style.display = 'none';
+                section.style.display = 'none'; // Esconde todas as seções
             });
-            document.getElementById(sectionId).style.display = 'block';
+            document.getElementById(sectionId).style.display = 'block'; // Mostra a seção atual
         }
-
-        // Exibe a seção de pergunta ao carregar a página
-        window.onload = function() {
-            showSection('pergunta');
-        };
 
         function openModal(imageSrc) {
             const modal = document.getElementById("modal");
