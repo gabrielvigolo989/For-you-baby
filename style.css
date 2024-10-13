@@ -30,6 +30,7 @@ button {
     margin: 0 10px; /* Margem entre os botões */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    font-size: 1.2em; /* Tamanho da fonte dos botões */
 }
 
 button:hover {
@@ -37,8 +38,26 @@ button:hover {
     transform: scale(1.05); /* Aumenta ligeiramente o botão */
 }
 
+button:disabled {
+    background-color: #555; /* Cor dos botões desabilitados */
+    cursor: not-allowed; /* Muda o cursor para indicar que está desabilitado */
+}
+
 .section {
     display: none; /* Oculta seções por padrão */
+}
+
+#pergunta {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+#pergunta h1 {
+    color: #fff; /* Cor do texto da pergunta */
+    font-size: 2em; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Margem inferior */
 }
 
 .imagem-inicial {
