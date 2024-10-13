@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #800080; /* Cor de fundo roxa */
-    color: white; /* Cor do texto */
+    background-color: #800080; /* Fundo roxo */
+    color: white; /* Texto branco */
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -17,8 +17,8 @@ h1, h2 {
     color: #fff;
 }
 
-#pergunta {
-    margin: 20px; /* Margem em volta da pergunta */
+nav {
+    margin: 20px 0; /* Margens superiores e inferiores */
 }
 
 button {
@@ -27,13 +27,14 @@ button {
     border: 2px solid #fff; /* Borda dos botões */
     border-radius: 10px;
     padding: 10px 20px; /* Espaçamento interno */
-    margin: 10px; /* Margem entre os botões */
+    margin: 0 10px; /* Margem entre os botões */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
 }
 
 button:hover {
     background-color: #6c1a8f; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
 }
 
 .section {
@@ -114,6 +115,10 @@ button:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Termina visível */
+    }
 }
