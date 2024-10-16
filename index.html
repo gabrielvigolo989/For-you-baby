@@ -79,6 +79,7 @@ If the world was ending, I'd wanna be next to you
 Ooh, ooh
 I'd wanna be next to you
             </pre>
+            <button onclick="showSection('inicio')">Voltar para o Início</button>
         </div>
 
         <button onclick="showSection('mensagem-dois-meses')">CLIQUE AQUI MEU BEM!</button>
@@ -147,8 +148,8 @@ I'd wanna be next to you
         </div>
     </div>
 
-    <div id="modal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
     </div>
@@ -171,9 +172,11 @@ I'd wanna be next to you
             captionText.innerHTML = imageSrc;
         }
 
-        function closeModal() {
+        function closeModal(event) {
             const modal = document.getElementById("modal");
-            modal.style.display = "none";
+            if (event.target === modal || event.target.className === 'close') {
+                modal.style.display = "none";
+            }
         }
     </script>
 </body>
