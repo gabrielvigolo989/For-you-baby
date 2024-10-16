@@ -79,6 +79,7 @@ If the world was ending, I'd wanna be next to you
 Ooh, ooh
 I'd wanna be next to you
             </pre>
+            <button onclick="showSection('letra-musica')">Voltar</button>
         </div>
 
         <button onclick="showSection('mensagem-dois-meses')">CLIQUE AQUI MEU BEM!</button>
@@ -99,26 +100,6 @@ I'd wanna be next to you
                 <img src="imagem8.jpeg" alt="Imagem 8" onclick="openModal('imagem8.jpeg')">
                 <img src="imagem9.jpeg" alt="Imagem 9" onclick="openModal('imagem9.jpeg')">
                 <img src="imagem10.jpeg" alt="Imagem 10" onclick="openModal('imagem10.jpeg')">
-                <img src="imagem11.jpeg" alt="Imagem 11" onclick="openModal('imagem11.jpeg')">
-                <img src="imagem12.jpeg" alt="Imagem 12" onclick="openModal('imagem12.jpeg')">
-                <img src="imagem13.jpeg" alt="Imagem 13" onclick="openModal('imagem13.jpeg')">
-                <img src="imagem14.jpeg" alt="Imagem 14" onclick="openModal('imagem14.jpeg')">
-                <img src="imagem15.jpeg" alt="Imagem 15" onclick="openModal('imagem15.jpeg')">
-                <img src="imagem16.jpeg" alt="Imagem 16" onclick="openModal('imagem16.jpeg')">
-                <img src="imagem17.jpeg" alt="Imagem 17" onclick="openModal('imagem17.jpeg')">
-                <img src="imagem18.jpeg" alt="Imagem 18" onclick="openModal('imagem18.jpeg')">
-                <img src="imagem19.jpeg" alt="Imagem 19" onclick="openModal('imagem19.jpeg')">
-                <img src="imagem20.jpeg" alt="Imagem 20" onclick="openModal('imagem20.jpeg')">
-                <img src="imagem21.jpeg" alt="Imagem 21" onclick="openModal('imagem21.jpeg')">
-                <img src="imagem22.jpeg" alt="Imagem 22" onclick="openModal('imagem22.jpeg')">
-                <img src="imagem23.jpeg" alt="Imagem 23" onclick="openModal('imagem23.jpeg')">
-                <img src="imagem24.jpeg" alt="Imagem 24" onclick="openModal('imagem24.jpeg')">
-                <img src="imagem25.jpeg" alt="Imagem 25" onclick="openModal('imagem25.jpeg')">
-                <img src="imagem26.jpeg" alt="Imagem 26" onclick="openModal('imagem26.jpeg')">
-                <img src="imagem27.jpeg" alt="Imagem 27" onclick="openModal('imagem27.jpeg')">
-                <img src="imagem28.jpeg" alt="Imagem 28" onclick="openModal('imagem28.jpeg')">
-                <img src="imagem29.jpeg" alt="Imagem 29" onclick="openModal('imagem29.jpeg')">
-                <img src="imagem30.jpeg" alt="Imagem 30" onclick="openModal('imagem30.jpeg')">
             </div>
         </div>
 
@@ -143,16 +124,49 @@ I'd wanna be next to you
         <div id="mensagem-dois-meses" class="section" style="display:none;">
             <h1>Mensagem de Dois Meses</h1>
             <button onclick="showSection('letra-musica')">Voltar</button>
-            <p>Meu amor, muito obrigado pelos momentos que vivemos juntos nesses dois meses. Cada risada, cada olhar e cada toque significam o mundo para mim. Eu sou tão grato por ter você na minha vida. Você é a razão do meu sorriso e meu apoio nos dias difíceis. Nunca se esqueça do quanto você é especial para mim. Que venham muitos outros meses juntos! EU TE AMO.</p>
+            <p>Meu amor, muito obrigado pelos momentos que vivemos juntos até agora, espero que possamos compartilhar muitos mais... Você é o amor da minha vida, minha princesinha linda. Saiba que você é perfeita e me sinto muito feliz de ter uma pessoa tão especial como você na minha vida. Por favor, continue sendo essa garota inteligente, dedicada, forte e amorosa que você é. Desde o dia em que nos conhecemos minha vida vem sendo muito melhor por ter você comigo. Eu te amo demais minha gatinha, minha princesa, meu amor... EU. TE. AMO! &lt;3</p>
         </div>
 
-        <!-- Modal -->
-        <div id="modal" class="modal" style="display:none;">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage" src="">
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+
+        // Fecha o modal ao clicar fora da imagem
+        window.onclick = function(event) {
+            const modal = document.getElementById("modal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Exibe a seção inicial ao carregar a página
+        window.onload = function() {
+            showSection('letra-musica');
+        };
+    </script>
 </body>
 </html>
