@@ -119,40 +119,62 @@ I'd wanna be next to you
                 <img src="imagem29.jpeg" alt="Imagem 29" onclick="openModal('imagem29.jpeg')">
                 <img src="imagem30.jpeg" alt="Imagem 30" onclick="openModal('imagem30.jpeg')">
             </div>
-            <button onclick="showSection('letra-musica')">Voltar para o Início</button>
+            <button onclick="showSection('inicio')">Voltar para o Início</button>
         </div>
 
         <div id="mensagem" class="section" style="display:none;">
             <h1>Mensagem para Maria</h1>
             <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão de toda a minha felicidade. Eu te amo demais e sou grato por ter você na minha vida. Cada momento ao seu lado é especial, e eu não trocaria isso por nada!</p>
-            <button onclick="showSection('letra-musica')">Voltar para o Início</button>
+            <button onclick="showSection('inicio')">Voltar para o Início</button>
         </div>
 
         <div id="agradecimento" class="section" style="display:none;">
             <h1>Agradecimento</h1>
             <p>Mozinho, quero agradecer por todos os momentos que vivemos desde que nos conhecemos em julho. Cada risada, cada conversa e cada brincadeira que fazemos só fortalecem o que sinto por você. Esses momentos me fazem perceber o quão sortudo sou por ter você ao meu lado. Desejo que continuemos juntos, apesar das dificuldades... Juntos. Você é uma parte fundamental da minha vida, e espero que possamos ficar juntos para sempre!</p>
-            <button onclick="showSection('letra-musica')">Voltar para o Início</button>
+            <button onclick="showSection('inicio')">Voltar para o Início</button>
         </div>
 
         <div id="sobre" class="section" style="display:none;">
             <h1>Um pouco sobre mim</h1>
             <p>Às vezes, eu sei que sou difícil de lidar. Fico triste por coisas simples e tenho minhas inseguranças, o que pode causar meus ciúmes. Desculpa por isso. Na verdade, tudo isso é uma forma de expressar o quanto eu te amo e o quanto você significa para mim. Quero que saiba que estou sempre tentando melhorar e ser uma pessoa melhor para nós dois. Quando estamos juntos, percebo que me sinto muito bem, e esses sentimentos não me afetam tanto... Você é tudo que eu preciso. EU TE AMO...</p>
-            <button onclick="showSection('letra-musica')">Voltar para o Início</button>
+            <button onclick="showSection('inicio')">Voltar para o Início</button>
         </div>
 
         <div id="mensagem-dois-meses" class="section" style="display:none;">
-            <h1>Mensagem de Dois Meses</h1>
-            <p>Meu amor, muito obrigado pelos momentos que vivemos juntos até agora. Sou grato por cada dia ao seu lado e por cada lembrança que criamos. Você me faz querer ser a melhor versão de mim mesmo, e eu espero que possamos criar ainda mais memórias incríveis juntos. Estou animado para ver o que o futuro nos reserva. Te amo muito!</p>
-            <button onclick="showSection('letra-musica')">Voltar para o Início</button>
-        </div>
-
-        <div id="modal" class="modal" style="display:none;">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modal-image">
-            <div id="caption"></div>
+            <h1>Mensagem de 2 Meses</h1>
+            <p>Dois meses se passaram, e cada dia ao seu lado só faz meu amor crescer mais! Obrigado por tudo, meu bem. Vamos continuar juntos, sempre!</p>
+            <button onclick="showSection('inicio')">Voltar para o Início</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("img01");
+            const captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            captionText.innerHTML = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
