@@ -15,13 +15,9 @@ body {
 
 h1, h2 {
     color: #fff;
-}
-
-h1 {
-    text-align: center; /* Centraliza o título */
-    font-size: 2em; /* Aumenta o tamanho da fonte */
-    margin: 20px 0; /* Margem acima e abaixo */
-    color: #ff69b4; /* Cor do título (exemplo: rosa) */
+    border: 2px solid white; /* Borda ao redor dos títulos */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
 nav {
@@ -33,10 +29,11 @@ button {
     color: white;
     border: 2px solid #fff; /* Borda dos botões */
     border-radius: 10px;
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 15px 30px; /* Aumentei o tamanho dos botões */
     margin: 0 10px; /* Margem entre os botões */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    font-size: 1.2em; /* Aumentei o tamanho da fonte dos botões */
 }
 
 button:hover {
@@ -46,8 +43,6 @@ button:hover {
 
 .section {
     display: none; /* Oculta seções por padrão */
-    text-align: center; /* Centraliza o texto nas seções */
-    margin: 20px; /* Margem nas seções */
 }
 
 .imagem-inicial {
