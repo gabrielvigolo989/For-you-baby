@@ -5,6 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
+    font-size: 1.2em; /* Aumentei o tamanho da fonte */
 }
 
 .container {
@@ -13,11 +14,12 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #fff;
     border: 2px solid white; /* Borda ao redor dos títulos */
     padding: 10px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
+    font-size: 1.5em; /* Aumentei o tamanho da fonte dos títulos */
 }
 
 nav {
