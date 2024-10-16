@@ -17,6 +17,13 @@ h1, h2 {
     color: #fff;
 }
 
+h1 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2em; /* Aumenta o tamanho da fonte */
+    margin: 20px 0; /* Margem acima e abaixo */
+    color: #ff69b4; /* Cor do título (exemplo: rosa) */
+}
+
 nav {
     margin: 20px 0; /* Margens superiores e inferiores */
 }
@@ -39,6 +46,8 @@ button:hover {
 
 .section {
     display: none; /* Oculta seções por padrão */
+    text-align: center; /* Centraliza o texto nas seções */
+    margin: 20px; /* Margem nas seções */
 }
 
 .imagem-inicial {
