@@ -119,35 +119,34 @@ I'd wanna be next to you
                 <img src="imagem29.jpeg" alt="Imagem 29" onclick="openModal('imagem29.jpeg')">
                 <img src="imagem30.jpeg" alt="Imagem 30" onclick="openModal('imagem30.jpeg')">
             </div>
+            <button onclick="showSection('letra-musica')">Voltar</button>
         </div>
 
         <div id="mensagem" class="section" style="display:none;">
             <h1>Mensagem para Maria</h1>
             <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão de toda a minha felicidade. Eu te amo demais e sou grato por ter você na minha vida. Cada momento ao seu lado é especial, e eu não trocaria isso por nada!</p>
+            <button onclick="showSection('letra-musica')">Voltar</button>
         </div>
 
         <div id="agradecimento" class="section" style="display:none;">
             <h1>Agradecimento</h1>
             <p>Mozinho, quero agradecer por todos os momentos que vivemos desde que nos conhecemos em julho. Cada risada, cada conversa e cada brincadeira que fazemos só fortalecem o que sinto por você. Esses momentos me fazem perceber o quão sortudo sou por ter você ao meu lado. Desejo que continuemos juntos, apesar das dificuldades... Juntos. Você é uma parte fundamental da minha vida, e espero que possamos ficar juntos para sempre!</p>
+            <button onclick="showSection('letra-musica')">Voltar</button>
         </div>
 
         <div id="sobre" class="section" style="display:none;">
             <h1>Um pouco sobre mim</h1>
             <p>Às vezes, eu sei que sou difícil de lidar. Fico triste por coisas simples e tenho minhas inseguranças, o que pode causar meus ciúmes. Desculpa por isso. Na verdade, tudo isso é uma forma de expressar o quanto eu te amo e o quanto você significa para mim. Quero que saiba que estou sempre tentando melhorar e ser uma pessoa melhor para nós dois. Quando estamos juntos, percebo que me sinto muito bem, e esses sentimentos não me afetam tanto... Você é tudo que eu preciso. EU TE AMO...</p>
+            <button onclick="showSection('letra-musica')">Voltar</button>
         </div>
 
         <div id="mensagem-dois-meses" class="section" style="display:none;">
-            <h1>Mensagem de Dois Meses</h1>
-            <p>Meu amor, muito obrigado pelos momentos que vivemos juntos até agora, espero que possamos compartilhar muitos mais... Você é o amor da minha vida, minha princesinha linda. Saiba que você é perfeita e me sinto muito feliz de ter uma pessoa tão especial como você na minha vida. Por favor, continue sendo essa garota inteligente, dedicada, forte e amorosa que você é. Desde o dia em que nos conhecemos minha vida vem sendo muito melhor por ter você comigo. Eu te amo demais minha gatinha, minha princesa, meu amor... EU. TE. AMO! &lt;3</p>
-        </div>
-
-        <div id="modal" class="modal" onclick="closeModal()">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
+            <h1>Dois Meses</h1>
+            <p>Dois meses se passaram desde que você entrou na minha vida e transformou tudo. Sou eternamente grato por cada momento que passamos juntos e por tudo que você representa para mim.</p>
+            <button onclick="showSection('letra-musica')">Voltar</button>
         </div>
     </div>
-
+    
     <script>
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
@@ -158,24 +157,8 @@ I'd wanna be next to you
         }
 
         function openModal(imageSrc) {
-            const modal = document.getElementById("modal");
-            const modalImage = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImage.src = imageSrc;
-            modalImage.classList.add('fade-in'); // Adiciona animação
+            // Lógica para abrir a imagem em um modal (não implementada aqui)
         }
-
-        function closeModal() {
-            const modal = document.getElementById("modal");
-            modal.style.display = "none";
-            const modalImage = document.getElementById("modalImage");
-            modalImage.classList.remove('fade-in'); // Remove animação
-        }
-
-        // Exibe a seção inicial ao carregar a página
-        window.onload = function() {
-            showSection('letra-musica');
-        };
     </script>
 </body>
 </html>
