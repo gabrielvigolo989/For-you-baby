@@ -95,6 +95,7 @@ button:hover {
     max-width: 700px; /* Largura máxima */
     border: 5px solid white; /* Borda ao redor da imagem */
     border-radius: 10px; /* Bordas arredondadas */
+    transition: opacity 0.3s ease; /* Transição de opacidade */
 }
 
 .close {
