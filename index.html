@@ -87,6 +87,7 @@ I'd wanna be next to you
 
         <div id="galeria" class="section" style="display:none;">
             <h1>Galeria de Amor</h1>
+            <button onclick="showSection('letra-musica')">Voltar</button>
             <div class="image-container">
                 <img src="imagem1.jpeg" alt="Imagem 1" onclick="openModal('imagem1.jpeg')">
                 <img src="imagem2.jpeg" alt="Imagem 2" onclick="openModal('imagem2.jpeg')">
@@ -123,59 +124,35 @@ I'd wanna be next to you
 
         <div id="mensagem" class="section" style="display:none;">
             <h1>Mensagem para Maria</h1>
+            <button onclick="showSection('letra-musica')">Voltar</button>
             <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão de toda a minha felicidade. Eu te amo demais e sou grato por ter você na minha vida. Cada momento ao seu lado é especial, e eu não trocaria isso por nada!</p>
         </div>
 
         <div id="agradecimento" class="section" style="display:none;">
             <h1>Agradecimento</h1>
+            <button onclick="showSection('letra-musica')">Voltar</button>
             <p>Mozinho, quero agradecer por todos os momentos que vivemos desde que nos conhecemos em julho. Cada risada, cada conversa e cada brincadeira que fazemos só fortalecem o que sinto por você. Esses momentos me fazem perceber o quão sortudo sou por ter você ao meu lado. Desejo que continuemos juntos, apesar das dificuldades... Juntos. Você é uma parte fundamental da minha vida, e espero que possamos ficar juntos para sempre!</p>
         </div>
 
         <div id="sobre" class="section" style="display:none;">
             <h1>Um pouco sobre mim</h1>
+            <button onclick="showSection('letra-musica')">Voltar</button>
             <p>Às vezes, eu sei que sou difícil de lidar. Fico triste por coisas simples e tenho minhas inseguranças, o que pode causar meus ciúmes. Desculpa por isso. Na verdade, tudo isso é uma forma de expressar o quanto eu te amo e o quanto você significa para mim. Quero que saiba que estou sempre tentando melhorar e ser uma pessoa melhor para nós dois. Quando estamos juntos, percebo que me sinto muito bem, e esses sentimentos não me afetam tanto... Você é tudo que eu preciso. EU TE AMO...</p>
         </div>
 
         <div id="mensagem-dois-meses" class="section" style="display:none;">
             <h1>Mensagem de Dois Meses</h1>
-            <p>Meu amor, muito obrigado pelos momentos que vivemos juntos até agora, espero que possamos compartilhar muitos mais... Você é o amor da minha vida, minha princesinha linda. Saiba que você é perfeita e me sinto muito feliz de ter uma pessoa tão especial como você na minha vida. Por favor, continue sendo essa garota inteligente, dedicada, forte e amorosa que você é. Desde o dia em que nos conhecemos minha vida vem sendo muito melhor por ter você comigo. Eu te amo demais minha gatinha, minha princesa, meu amor... EU. TE. AMO! &lt;3</p>
+            <button onclick="showSection('letra-musica')">Voltar</button>
+            <p>Meu amor, muito obrigado pelos momentos que vivemos juntos nesses dois meses. Cada risada, cada olhar e cada toque significam o mundo para mim. Eu sou tão grato por ter você na minha vida. Você é a razão do meu sorriso e meu apoio nos dias difíceis. Nunca se esqueça do quanto você é especial para mim. Que venham muitos outros meses juntos! EU TE AMO.</p>
         </div>
 
-        <div id="modal" class="modal" onclick="closeModal()">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
+        <!-- Modal -->
+        <div id="modal" class="modal" style="display:none;">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage" src="">
         </div>
     </div>
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-
-        function openModal(imageSrc) {
-            const modal = document.getElementById("modal");
-            const modalImage = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImage.src = imageSrc;
-            modalImage.classList.add('fade-in'); // Adiciona animação
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("modal");
-            modal.style.display = "none";
-            const modalImage = document.getElementById("modalImage");
-            modalImage.classList.remove('fade-in'); // Remove animação
-        }
-
-        // Exibe a seção inicial ao carregar a página
-        window.onload = function() {
-            showSection('letra-musica');
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
