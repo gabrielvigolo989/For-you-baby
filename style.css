@@ -5,7 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
-    font-size: 1.2em; /* Aumentei o tamanho da fonte */
+    font-size: 1.4em; /* Aumenta o tamanho da fonte */
 }
 
 .container {
@@ -14,12 +14,10 @@ body {
     padding: 20px;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: #fff;
     border: 2px solid white; /* Borda ao redor dos títulos */
     padding: 10px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    font-size: 1.5em; /* Aumentei o tamanho da fonte dos títulos */
 }
 
 nav {
@@ -31,11 +29,11 @@ button {
     color: white;
     border: 2px solid #fff; /* Borda dos botões */
     border-radius: 10px;
-    padding: 15px 30px; /* Aumentei o tamanho dos botões */
+    padding: 20px 40px; /* Aumenta o espaçamento interno dos botões */
     margin: 0 10px; /* Margem entre os botões */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
-    font-size: 1.2em; /* Aumentei o tamanho da fonte dos botões */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte dos botões */
 }
 
 button:hover {
