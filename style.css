@@ -29,78 +29,100 @@ button {
     color: white;
     border: 2px solid #fff; /* Borda dos botões */
     border-radius: 10px;
-    padding: 15px 25px; /* Espaçamento interno do botão */
-    cursor: pointer;
-    margin: 5px; /* Margem entre os botões */
-    transition: background-color 0.3s; /* Transição suave */
+    padding: 15px 30px; /* Aumentei o tamanho dos botões */
+    margin: 0 10px; /* Margem entre os botões */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    font-size: 1.2em; /* Aumentei o tamanho da fonte dos botões */
 }
 
 button:hover {
-    background-color: #5e0f5e; /* Cor de fundo ao passar o mouse */
+    background-color: #6c1a8f; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+.section {
+    display: none; /* Oculta seções por padrão */
 }
 
 .imagem-inicial {
-    width: 100%; /* Imagem ocupa toda a largura */
-    max-width: 600px; /* Largura máxima da imagem */
-    border-radius: 15px; /* Bordas arredondadas */
-}
-
-.letra-musica {
-    margin: 20px 0; /* Margem superior e inferior para separar do restante */
-    text-align: left; /* Alinhamento do texto à esquerda */
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo com leve transparência */
-    padding: 15px; /* Espaçamento interno */
+    width: 100%; /* Ajusta a imagem inicial para a largura total */
+    max-width: 600px; /* Limita a largura máxima */
+    height: auto;
     border-radius: 10px; /* Bordas arredondadas */
-    color: white; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
+    margin: 20px 0; /* Margens superior e inferior */
 }
 
 .image-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre imagens */
 }
 
 .image-container img {
-    width: 150px; /* Largura das imagens da galeria */
-    margin: 10px; /* Margem entre as imagens */
-    cursor: pointer; /* Cursor muda ao passar o mouse */
-    border-radius: 10px; /* Bordas arredondadas das imagens */
+    width: 150px; /* Ajusta a largura das imagens da galeria */
+    height: 100px; /* Ajusta a altura das imagens da galeria */
+    object-fit: cover; /* Cobre o espaço disponível */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra na imagem */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
+    border: 2px solid #fff; /* Borda branca nas miniaturas */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
 }
 
 .modal {
-    display: none; /* Oculta o modal */
-    position: fixed; /* Fixa o modal */
-    z-index: 1; /* Coloca o modal acima do conteúdo */
+    display: none; /* Esconde o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1000; /* Coloca o modal acima de outros elementos */
     left: 0;
     top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Adiciona rolagem se necessário */
-    background-color: rgb(0,0,0); /* Fundo preto */
-    background-color: rgba(0,0,0,0.9); /* Fundo preto com transparência */
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
 }
 
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%; /* Largura da imagem no modal */
-    max-width: 700px; /* Largura máxima da imagem no modal */
+    margin: auto; /* Centraliza a imagem */
+    display: block; /* Exibe a imagem */
+    width: 80%; /* Largura da imagem */
+    max-width: 700px; /* Largura máxima */
+    border: 5px solid white; /* Borda ao redor da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: opacity 0.3s ease; /* Transição de opacidade */
 }
 
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white; /* Cor do botão fechar */
-    font-size: 40px; /* Tamanho do botão fechar */
+    position: absolute; /* Posiciona o botão de fechar */
+    top: 15px; /* Distância do topo */
+    right: 35px; /* Distância da direita */
+    color: white; /* Cor do texto do botão de fechar */
+    font-size: 40px; /* Tamanho do texto */
     font-weight: bold; /* Negrito */
-    transition: 0.3s; /* Transição suave */
+    cursor: pointer; /* Muda o cursor para pointer */
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb; /* Cor ao passar o mouse */
-    text-decoration: none; /* Remove o sublinhado */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
+#caption {
+    color: white; /* Cor do texto da legenda */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Margem superior */
 }
 
+.fade-in {
+    animation: fadeIn 0.5s; /* Animação de fade-in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Termina visível */
+    }
+}
