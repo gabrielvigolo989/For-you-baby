@@ -126,8 +126,3 @@ button:hover {
         opacity: 1; /* Termina visível */
     }
 }
-
-/* Estilo para o botão "Voltar" */
-button.voltar {
-    background-color: #ff5733; /* Cor diferente para o botão "Voltar" */
-}
